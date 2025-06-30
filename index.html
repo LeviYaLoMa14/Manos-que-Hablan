@@ -628,12 +628,15 @@
                         </svg>
                     `;
                 }
-
                 card.innerHTML = `
                     <div class="bg-stone-200 aspect-video flex items-center justify-center">
                         ${mediaContent}
                     </div>
-                    <p class="p-4 font-semibold text-center text-stone-700">${item.term}</p>
+                    <p class="p-4 font-semibold text-center text-stone-700">
+                      <a href="${item.video ? item.video : '#'}" target="_blank" rel="noopener noreferrer" class="text-[#C07B4F] hover:underline">
+                        ${item.term}
+                      </a>
+                    </p>
                 `;
 
                 dictionaryGrid.appendChild(card);
