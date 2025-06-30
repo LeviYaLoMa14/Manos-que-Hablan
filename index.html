@@ -348,7 +348,10 @@
 <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Data
-            const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+            const alphabet = [
+              "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "LL", "M",
+              "N", "Ñ", "O", "P", "Q", "R", 'RR', "S", "T", "U", "V", "W", "X", "Y", "Z"
+            ];
             const dictionary = [
                 { term: 'Hola', category: 'saludos', video: "https://www.youtube.com/shorts/JPJ5oHsExdc?feature=share" }, { term: 'Adiós', category: 'saludos', video:'https://www.youtube.com/shorts/jQ2L0K0FoGY'},
                 { term: 'Buenos días', category: 'saludos', video:'https://www.youtube.com/shorts/UClL8_YjsKU?feature=share'}, { term: 'Gracias', category: 'saludos', video:'https://www.youtube.com/shorts/HAOZCVi96Z0?feature=share' },
@@ -471,6 +474,7 @@
             J: "https://www.dropbox.com/scl/fi/gugb4pjp4yk8ljsk29m46/J.png?rlkey=q4eudqn7lsxc873jnnntgcitr&st=snezm111&raw=1",
             K: "https://www.dropbox.com/scl/fi/jhhrc6fbid455pwkdeuzs/K.png?rlkey=r42cybn27x3izrphjo6dhfs2c&st=0lnjub2f&raw=1",
             L: "https://www.dropbox.com/scl/fi/ae27lcnoskxkclsriw6uq/L.png?rlkey=v27o99fmyufj9s1aj9qi6xkk4&st=xig7vt1m&raw=1",
+            LL: "https://www.dropbox.com/scl/fi/5oq6hrfghk2szk8kk8361/LLRR.jpg?rlkey=mi87xe3hkong0hgfjqlhioefx&st=eiht81y0&raw=1",
             M: "https://www.dropbox.com/scl/fi/cxh2k24bs5l883zltu28b/M.png?rlkey=ow60tn1w9y9bq9lm2lt00axff&st=02h1s0lt&raw=1",
             N: "https://www.dropbox.com/scl/fi/z9thcvn7cx1142slpkoep/N.png?rlkey=o7a8icw2z51ydxke1d5b5jxt2&st=vbbow6hh&raw=1",
             Ñ: "https://www.dropbox.com/scl/fi/au7fd5p97gkiq1z5wqye5/.png?rlkey=w6xyn5fagna34eagve9dczuqr&st=z097gfa0&raw=1",
@@ -478,6 +482,7 @@
             P: "https://www.dropbox.com/scl/fi/9o68kzzbnk9hv6nyj54l3/P.png?rlkey=t1bwfvnfp96qirqaub3224j85&st=fdttg81j&raw=1",
             Q: "https://www.dropbox.com/scl/fi/6wtal3vtfi7nxis5nu1dw/Q.png?rlkey=3fjvwi1u5bjyrnr2y8pkwul24&st=m024678c&raw=1",
             R: "https://www.dropbox.com/scl/fi/jy4ytxeseeprf1m04iav3/R.png?rlkey=ebd9q2847btup3tnpdm4nfzxv&st=s1rhzs4x&raw=1",
+            RR: "https://www.dropbox.com/scl/fi/5oq6hrfghk2szk8kk8361/LLRR.jpg?rlkey=mi87xe3hkong0hgfjqlhioefx&st=eiht81y0&raw=1",
             S: "https://www.dropbox.com/scl/fi/cdohlb86abbbe0vol11co/S.png?rlkey=vcet66hstr76ri428mw5n8auy&st=m77h4od0&raw=1",
             T: "https://www.dropbox.com/scl/fi/j546qbjzjvmnewo3j4h19/T.png?rlkey=dd0nzyw9ri57ezkpq5n99orjv&st=ww1farr6&raw=1",
             U: "https://www.dropbox.com/scl/fi/47u51zzwb80bb56jecc6y/U.png?rlkey=lqbrvquz0xa4ksbuhwvnaaq64&st=8wykxenr&raw=1",
@@ -500,6 +505,7 @@
               J: "J: Con la mano cerrada, el dedo meñique bien estirado señalando hacia arriba y la palma a un lado dibuja una j en el aire.",
               K: "K: Se cierra la mano con los dedos índice, medio y pulgar estirados. La yema del pulgar se pone entre el índice y el medio. Se mueve la muñeca hacia arriba.",
               L: "L: Con la mano cerrada y los dedos índice y pulgar estirados, se forma una l. La palma mira al frente.",
+              LL: "doble L (ll): se representa con un movimiento sutil de la mano, similar a la seña de la letra L, pero con un ligero movimiento hacia afuera.",
               M: "M: Con la mano cerrada, se ponen los dedos índice, medio y anular sobre el pulgar.",
               N: "N: Con la mano cerrada, se ponen los dedos índice y medio sobre el pulgar.",
               Ñ: "Ñ: Con la mano cerrada, se ponen los dedos índice y medio sobre el pulgar. Se mueve la muñeca a los lados.",
@@ -507,6 +513,7 @@
               P: "P: Con la mano cerrada y los dedos índice, medioy pulgar estirados, se pone la yema del pulgarentre el índice y el medio.",
               Q: "Q: Con la mano cerrada, se ponen los dedos índice y pulgar en posición de garra. La palma mira hacia abajo, y se mueve la muñeca hacia los lados.",
               R: "R: Con la mano cerrada, se estiran y entrelazanlos dedos índice y medio. La palma mira alfrente.",
+              RR: "Doble R o RR: Se realiza un movimiento rápido de la mano de esta posición, simulando el sonido vibrante de la rr ",
               S: "S: Con la mano cerrada, se pone el pulgar sobre los otros dedos. La palma mira al frente.",
               T: "T: Con la mano cerrada, el pulgar se pone entre el índice y el medio. La palma mira al frente.",
               U: "U: Con la mano cerrada, se estiran los dedos índice y medio unidos. La palma mira al frente.",
